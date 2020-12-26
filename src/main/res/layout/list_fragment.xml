@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/menu_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="40dp"
+        >
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+
+    <RelativeLayout
+        android:id="@+id/cart_layout"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/cart_bg"
+        android:layout_marginRight="40dp"
+        android:gravity="center"
+        android:elevation="10dp"
+        >
+        <ImageView
+            android:id="@+id/cart_icon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:padding="5dp"
+            android:src="@drawable/cart_icon"
+            />
+
+        <TextView
+            android:id="@+id/item_count"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:textColor="#ffffff"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/cart_circle"
+            android:layout_marginRight="10dp"
+            android:text="0"
+            />
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

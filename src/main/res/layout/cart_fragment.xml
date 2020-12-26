@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/lables_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        >
+
+        <TextView
+            android:id="@+id/menu_name_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:layout_alignParentLeft="true"
+            android:textColor="#000000"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:text="Item Name"
+            android:fontFamily="monospace"
+            />
+
+        <TextView
+            android:id="@+id/qty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:layout_alignParentRight="true"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:text="Quantity"
+            android:textStyle="bold"
+            android:gravity="right"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            />
+
+        <TextView
+            android:id="@+id/menu_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:layout_alignParentRight="true"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:gravity="right"
+            android:textSize="14sp"
+            android:text="Price"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cart_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/lables_layout"
+        android:layout_above="@+id/tax_layout"
+        >
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <LinearLayout
+        android:id="@+id/tax_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_above="@+id/chk_out_txt"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="15dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            >
+
+            <!--Just an empty layout-->
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            >
+
+            <TextView
+                android:id="@+id/sb_ttl_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Sub total"
+                android:textColor="#000000"
+                />
+            <TextView
+                android:id="@+id/sb_ttlv_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="Rs. 420"
+                android:textColor="#000000"
+                />
+
+            <TextView
+                android:id="@+id/sgst_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/sb_ttl_txt"
+                android:text="SGST 2.5%"
+                android:textColor="#000000"
+                />
+            <TextView
+                android:id="@+id/sgst_vl_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/sb_ttlv_txt"
+                android:text="Rs. 420"
+                android:textColor="#000000"
+                />
+
+            <TextView
+                android:id="@+id/cgst_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/sgst_txt"
+                android:text="CGST 2.5%"
+                android:textColor="#000000"
+                />
+            <TextView
+                android:id="@+id/cgst_vl_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/sgst_vl_txt"
+                android:text="Rs. 420"
+                android:textColor="#000000"
+                />
+
+            <View
+                android:id="@+id/live_view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/cgst_txt"
+                android:background="#000000"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="#000000"
+                />
+
+            <TextView
+                android:id="@+id/total_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/live_view"
+                android:textStyle="bold"
+                android:text="Total Payable"
+                android:textColor="#000000"
+                />
+
+            <TextView
+                android:id="@+id/total_pay_vl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/live_view"
+                android:textStyle="bold"
+                android:text="Rs. 320"
+                android:textColor="#000000"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/chk_out_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:textColor="#ffffff"
+        android:layout_margin="15dp"
+        android:gravity="center"
+        android:background="@color/colorAccent"
+        android:text="Check Out"
+        android:padding="10dp"
+        android:textSize="16sp"
+        />
+
+
+</RelativeLayout>

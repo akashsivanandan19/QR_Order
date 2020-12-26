@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">QR Order</string>
+    <string name="continue_with_email">Continue with email</string>
+    <string name="google">Google</string>
+    <string name="skip">Skip</string>
+    <string name="picture_with_dog">Picture with dog</string>
+    <string name="log_out">Log out</string>
+    <string name="scan">Scan</string>
+    <string name="dog_eating_ramen">Dog eating ramen</string>
+    <string name="restaurant_1">Restaurant 1</string>
+    <string name="restaurant_2">Restaurant 2</string>
+    <string name="title">title</string>
+    <string name="secondary_text">Secondary text</string>
+    <string name="supporting_text">Supporting text</string>
+    <string name="action_1">Place in cart</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="test">Test</string>
+</resources>
